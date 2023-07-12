@@ -1,6 +1,6 @@
 // import { Examples } from "./examples";
 import { PromptForm } from "./prompt-form";
-// import { PromptSuggestions } from "./prompt-suggestions";
+import { PromptSuggestions } from "./prompt-suggestions";
 // import { ResultImage } from "./result-image";
 import styles from "./styles.module.scss";
 
@@ -16,9 +16,9 @@ function HomePageContainer() {
         Tell us a prompt and we&apos;ll generate a story for you.
       </p>
       <PromptForm />
-      {/* <ResultImage />
+      {/* <ResultImage /> */}
       <PromptSuggestions />
-      <Examples /> */}
+      {/* <Examples /> */}
     </div>
   );
 }
