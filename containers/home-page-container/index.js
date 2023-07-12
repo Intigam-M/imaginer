@@ -1,4 +1,4 @@
-// import { Examples } from "./examples";
+import { Examples } from "./examples";
 import { PromptForm } from "./prompt-form";
 import { PromptSuggestions } from "./prompt-suggestions";
 // import { ResultImage } from "./result-image";
@@ -18,7 +18,7 @@ function HomePageContainer() {
       <PromptForm />
       {/* <ResultImage /> */}
       <PromptSuggestions />
-      {/* <Examples /> */}
+      <Examples />
     </div>
   );
 }
