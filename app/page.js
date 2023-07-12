@@ -1,7 +1,12 @@
-import { HomePageContainer } from "@/containers/home-page-container"
+import { HomePageContainer } from "@/containers/home-page-container";
+import { HomepageContextProvider } from "@/containers/home-page-container/use-homepage";
 
 function HomePage() {
-  return <HomePageContainer />
+  return (
+    <HomepageContextProvider>
+      <HomePageContainer />
+    </HomepageContextProvider>
+  );
 }
 
-export default HomePage
+export default HomePage;

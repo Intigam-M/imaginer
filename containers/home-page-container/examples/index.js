@@ -3,11 +3,10 @@ import Image from "next/image";
 import { EXAMPLES } from "./constants";
 import styles from "./styles.module.scss";
 import { Tag } from "@/components/tag";
-// import { useHomepage } from "../use-homepage";
+import { useHomepage } from "../use-homepage";
 
 function Examples() {
-//   const { copyPrompt } = useHomepage();
-const handleCopy = ()=>{}
+  const { copyPrompt } = useHomepage();
 
   return (
     <div className={styles.examples}>
@@ -17,7 +16,7 @@ const handleCopy = ()=>{}
           <Tag
             className={styles.copyButton}
             title="Copy"
-            onClick={handleCopy}
+            onClick={() => copyPrompt(example.prompt)}
           />
           <Image src={example.image} alt={example.prompt} fill />
         </div>

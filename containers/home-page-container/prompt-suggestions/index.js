@@ -1,11 +1,11 @@
 "use client";
 import { Tag } from "@/components/tag";
 import { SUGGESTIONS } from "./constants";
-// import { useHomepage } from "../use-homepage";
+import { useHomepage } from "../use-homepage";
 import styles from "./styles.module.scss";
 
 function PromptSuggestions({ suggestions = SUGGESTIONS }) {
-//   const { copyPrompt } = useHomepage();
+  const { copyPrompt } = useHomepage();
 
   return (
     <div className={styles.promptSuggestions}>
@@ -14,7 +14,7 @@ function PromptSuggestions({ suggestions = SUGGESTIONS }) {
       </h3>
       <div className={styles.suggestions}>
         {suggestions.map(({ title, id }) => (
-          <Tag key={id} title={title}  />
+          <Tag key={id} title={title} onClick={copyPrompt} />
         ))}
       </div>
     </div>
